@@ -1,0 +1,13 @@
+header {
+  flex: 0 0 auto;
+  background-color: $header-background;
+}
+
+.header {
+  display: flex;
+  padding: 2vh;
+}
+
+.header__title {
+  justify-content: flex-end;
+}

@@ -1,0 +1,12 @@
+name = "Cli"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = ""
+homepage = "https://o0th.github.io"
+tags = []
+features = []
+min_version = "0.1"
+
+[author]
+  name = "Sabato Luca Guadagno"
+  homepage = "https://o0th.github.io"

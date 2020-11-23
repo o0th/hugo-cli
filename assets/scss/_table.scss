@@ -1,0 +1,11 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 1vh;
+}
+
+.column {
+  display: flex;
+  padding-right: 2vh;
+}

@@ -1,0 +1,22 @@
+<header>
+  <div class="header">
+    <div class="header__title pink">>&nbsp;</div>
+    <div class="header_title">
+      <span>{{ with .Site.Params.Logo.logoText }}{{ . }}{{ end }} in </span>
+      <a class="pink" href="{{ if .Site.Params.Logo.LogoHomeLink }}{{ .Site.Params.Logo.LogoHomeLink }}{{else}}{{ .Site.BaseURL | relLangURL }}{{ end }}">
+        ~
+      </a>
+    </div>
+    {{ $.Scratch.Set "path" "" }}
+    {{ range $element := split .RelPermalink "/" }}
+      {{ if ne $element "" }}
+        {{ $.Scratch.Add "path" "/" }}
+        {{ $.Scratch.Add "path" $element }}
+          <div class="header__title">&nbsp;/&nbsp;</div>
+          <div class="header__title">
+            <a class="pink" href="{{ $.Scratch.Get "path" }}">{{ . }}</a>
+          </div>
+        {{ end }}
+      {{ end }}
+  </div>
+</header>

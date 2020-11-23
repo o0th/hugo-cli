@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+<meta name="author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ range .Site.Author }}{{ . }} {{ end }}{{ end }}">
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.homeSubtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+
+{{ block "title" . }}
+  <title>
+    {{ if .IsHome }}
+      {{ $.Site.Title }} {{ with $.Site.Params.Subtitle }} — {{ . }} {{ end }}
+    {{ else }}
+      {{ .Title }} :: {{ $.Site.Title }} {{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}
+    {{ end }}
+  </title>
+{{ end }}
+
+{{ $sass := resources.Get "scss/main.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+<link rel="preload" as="font" href="/fonts/Hasklig-Regular.otf" type="openformat" crossorigin="anonymous">

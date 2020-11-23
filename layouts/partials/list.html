@@ -1,0 +1,14 @@
+<section class="main">
+  <div class="row">
+    <div class="column"><span class="pink">➜</span></div>
+    <div class="column"><span>ls -l</span></div>
+  </div>
+  <div class="row"><div class="column">total {{ len . }}</div></div>
+  {{ range . }}
+    <div class="row">
+      <div class="column">{{ .Date.Format "2006-01-02" }}</div>
+      <div class="column">{{ .Kind }}</div>
+      <div class="column pink"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+    </div>
+  {{ end }}
+</section>
