@@ -2,4 +2,8 @@ footer {
   flex-shrink: 0;
   background-color: $header-background;
   padding: 2vh;
+
+  p {
+    padding-bottom: 0;
+  }
 }

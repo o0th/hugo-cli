@@ -1,10 +1,10 @@
 <header>
   <nav>
     <div class="title">
-      <span class="bold green">{{ with .Site.Params.username }}{{ . }}{{ end }}</span><span>&nbsp;in&nbsp;</span>
-      <a class="cyan" href="{{ if .Site.Params.Logo.LogoHomeLink }}{{ .Site.Params.Logo.LogoHomeLink }}{{else}}{{ .Site.BaseURL | relLangURL }}{{ end }}">
-        ~
-      </a>
+      <p>
+        <span class="bold green">{{ with .Site.Params.username }}{{ . }}{{ end }}</span><span>&nbsp;in&nbsp;</span>
+        <a class="cyan" href="{{ .Site.BaseURL }}">~</a>
+      </p>
     </div>
     {{ $.Scratch.Set "path" "" }}
     {{ range $element := split .RelPermalink "/" }}
