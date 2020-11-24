@@ -1,14 +1,13 @@
-<section class="main">
-  <div class="row">
-    <div class="column"><span class="pink">➜</span></div>
-    <div class="column"><span>ls -l</span></div>
-  </div>
-  <div class="row"><div class="column">total {{ len . }}</div></div>
-  {{ range . }}
-    <div class="row">
-      <div class="column">{{ .Date.Format "2006-01-02" }}</div>
-      <div class="column">{{ .Kind }}</div>
-      <div class="column pink"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-    </div>
-  {{ end }}
-</section>
+{{ partial "cmd.html" "ls -l" }}
+<table>
+  <tbody>
+      <tr><td>total {{ len . }}</td></tr>
+    {{ range . }}
+      <tr>
+        <td>{{ .Date.Format "2006-01-02 15:04" }}</td>
+        <td>{{ .Kind }}</td>
+        <td><a class="purple" href="{{ .Permalink }}">{{ lower (.Title) }}</a></td>
+      </tr>
+    {{ end }}
+  </tbody>
+</table>

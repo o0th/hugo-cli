@@ -1,9 +1,8 @@
 <header>
-  <div class="header">
-    <div class="header__title pink">>&nbsp;</div>
-    <div class="header_title">
-      <span>{{ with .Site.Params.Logo.logoText }}{{ . }}{{ end }} in </span>
-      <a class="pink" href="{{ if .Site.Params.Logo.LogoHomeLink }}{{ .Site.Params.Logo.LogoHomeLink }}{{else}}{{ .Site.BaseURL | relLangURL }}{{ end }}">
+  <nav>
+    <div class="title">
+      <span class="bold green">{{ with .Site.Params.username }}{{ . }}{{ end }}</span><span>&nbsp;in&nbsp;</span>
+      <a class="cyan" href="{{ if .Site.Params.Logo.LogoHomeLink }}{{ .Site.Params.Logo.LogoHomeLink }}{{else}}{{ .Site.BaseURL | relLangURL }}{{ end }}">
         ~
       </a>
     </div>
@@ -12,11 +11,16 @@
       {{ if ne $element "" }}
         {{ $.Scratch.Add "path" "/" }}
         {{ $.Scratch.Add "path" $element }}
-          <div class="header__title">&nbsp;/&nbsp;</div>
-          <div class="header__title">
-            <a class="pink" href="{{ $.Scratch.Get "path" }}">{{ . }}</a>
+          <div class="title">&nbsp;/&nbsp;</div>
+          <div class="title">
+            <a class="cyan" href="{{ $.Scratch.Get "path" }}">{{ . }}</a>
           </div>
         {{ end }}
       {{ end }}
-  </div>
+      <div class="links">
+        <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener" alt="Github">
+          <i class="fab fa-lg fa-github"></i>
+        </a>
+      </div>
+  </nav>
 </header>

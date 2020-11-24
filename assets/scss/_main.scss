@@ -8,11 +8,14 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   width: 100%;
+  height: 100%;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+
   font-family: 'Hasklig';
   background-color: $background;
   color: $foreground;
@@ -37,10 +40,30 @@ a {
   color: $pink;
 }
 
-.main {
-  padding: 2vh;
+.purple {
+  color: $purple;
 }
 
-.content {
-  max-width: 80ch;
+.green {
+  color: $green;
+}
+
+.cyan {
+  color: $cyan;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.main {
+  flex: 1 0 auto;
+
+  padding: 2vh;
+  max-width: 120ch;
+  overflow-wrap: break-word;
+}
+
+.arrow {
+  padding-right: 0.5vh;
 }

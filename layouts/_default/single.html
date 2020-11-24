@@ -1,5 +1,7 @@
 {{ define "main" }}
   <section class="main">
+    {{ $title := lower (printf "cat %s" .Title) }}
+    {{ partial "cmd.html" $title }}
     {{ .Content }}
-  </div>
+  </section>
 {{ end }}

@@ -1,3 +1,6 @@
 {{ define "main" }}
-  {{ partial "list.html" .Site.Sections }}
+  <section class="main">
+    {{ .Content }}
+    {{ partial "list.html" .Site.Sections }}
+  </section>
 {{ end }}

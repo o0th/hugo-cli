@@ -1,11 +1,11 @@
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-bottom: 1vh;
-}
+table {
+  padding-top: 1vh;
+  
+  tr {
+    padding-bottom: 1vh;
+  }
 
-.column {
-  display: flex;
-  padding-right: 2vh;
+  td {
+    padding-right: 2vh;
+  }
 }
