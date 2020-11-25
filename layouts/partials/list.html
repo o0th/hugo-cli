@@ -1,7 +1,7 @@
 {{ partial "cmd.html" "ls -l" }}
 <table>
   <tbody>
-      <tr><td>total {{ len . }}</td></tr>
+    <tr><td>total {{ len . }}</td></tr>
     {{ range . }}
       <tr>
         <td>{{ .Date.Format "2006-01-02 15:04" }}</td>

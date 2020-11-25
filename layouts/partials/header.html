@@ -2,7 +2,8 @@
   <nav>
     <div class="title">
       <p>
-        <span class="bold green">{{ with .Site.Params.username }}{{ . }}{{ end }}</span><span>&nbsp;in&nbsp;</span>
+        <a class="bold green" href="{{ .Site.BaseURL }}">{{ with .Site.Params.username }}{{ . }}{{ end }}</a>
+        <span>in</span>
         <a class="cyan" href="{{ .Site.BaseURL }}">~</a>
       </p>
     </div>
