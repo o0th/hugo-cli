@@ -8,3 +8,9 @@ $pink: #ff79c6;
 $purple: #bd93f9;
 $green: #50fa7b;
 $cyan: #8be9fd;
+
+// Chess
+$white-box: lighten($background, 20);
+$black-box: lighten($background, 10);
+$white-piece: lighten($background, 60);
+$black-piece: $background;
