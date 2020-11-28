@@ -1,13 +1,18 @@
 {{ partial "cmd.html" "ls -l" }}
 <table>
   <tbody>
-    <tr><td>total {{ len . }}</td></tr>
+    <tr>
+      <td>total {{ len . }}</td>
+    </tr>
     {{ range . }}
-      <tr>
-        <td>{{ .Date.Format "2006-01-02 15:04" }}</td>
-        <td>{{ .Kind }}</td>
-        <td><a class="purple" href="{{ .Permalink }}">{{ lower (.Title) }}</a></td>
-      </tr>
+    <tr>
+      <td>{{ .Date.Format "2006-01-02 15:04" }}</td>
+      <td>{{ .Kind }}</td>
+      <td>
+        <a class="purple" href="{{ .Permalink }}">{{ lower (.Title) }}</a>
+      </td>
+    </tr>
     {{ end }}
   </tbody>
 </table>
+
