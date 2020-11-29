@@ -1,3 +1,14 @@
+.chess {
+  display: flex;
+}
+
+.moves {
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  padding: 20px;
+}
+
 .chessboard {
   display: flex;
   box-sizing: content-box;
