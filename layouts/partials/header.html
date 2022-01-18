@@ -19,15 +19,21 @@
         {{ end }}
       {{ end }}
       <div class="links">
+        {{ if (isset .Site.Params "github") }}
         <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener" alt="Github">
           <i class="fab fa-lg fa-github"></i>
         </a>
+        {{ end }}
+        {{ if (isset .Site.Params "instagram") }}
         <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener" alt="Instagram">
           <i class="fab fa-lg fa-instagram"></i>
         </a>
+        {{ end }}
+        {{ if (isset .Site.Params "chess") }}
         <a href="{{ .Site.Params.chess }}" target="_blank" rel="noopener" alt="Chess">
           <i class="fa fa-lg fa-chess"></i>
         </a>
+        {{ end }}
       </div>
   </nav>
 </header>
